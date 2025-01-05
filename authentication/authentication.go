@@ -97,7 +97,7 @@ func GenerateToken(userId, authCode, encodedSignature, base64PublicKey string) (
 	return token
 }
 
-// Get new access token and refreshToken from provided `refreshToken`
+// Get new accessToken and refreshToken from provided `refreshToken`
 func RefreshToken(refreshToken string) (tokenStruct TokenStruct, status bool) {
 	tokenEndPoint := helpers.GetAuthenticationEndpoint("refresh")
 	req, err := http.NewRequest("POST", tokenEndPoint, nil)
